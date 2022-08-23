@@ -2,24 +2,24 @@
 @import "./pick.css";
 
 :root{
-    --yellow_one: hsl(39, 89%, 49%);
-    --yellow_to: hsl(40, 84%, 53%);
-    --rock_one: hsl(349, 71%, 52%);
-    --rock_two: hsl(349, 70%, 56%);
-    --paper_one: hsl(230, 89%, 62%);
-    --paper_two: hsl(230, 89%, 65%);
-    --lizard_one: hsl(261, 73%, 60%)
-    --lizard_two: hsl(261, 72%, 63%);
-    --cyan_one: hsl(189, 59%, 53%);
-    --cyan_two: hsl(189, 58%, 57%);
-    --Dark_Text: hsl(229, 25%, 31%);
-    --Score_Text: hsl(229, 64%, 46%);
-    --Header_Outline: hsl(217, 16%, 45%);
-    --Radial_one: hsl(214, 47%, 23%);
-    --Radial_two: hsl(237, 49%, 15%);
-    --White: #fff;
-    --Mobile: 375px;
-    --Desktop: 1366px;
+  --yellow_one: hsl(39, 89%, 49%);
+  --yellow_to: hsl(40, 84%, 53%);
+  --rock_one: hsl(349, 71%, 52%);
+  --rock_two: hsl(349, 70%, 56%);
+  --paper_one: hsl(230, 89%, 62%);
+  --paper_two: hsl(230, 89%, 65%);
+  --lizard_one: hsl(261, 73%, 60%)
+  --lizard_two: hsl(261, 72%, 63%);
+  --cyan_one: hsl(189, 59%, 53%);
+  --cyan_two: hsl(189, 58%, 57%);
+  --Dark_Text: hsl(229, 25%, 31%);
+  --Score_Text: hsl(229, 64%, 46%);
+  --Header_Outline: hsl(217, 16%, 45%);
+  --Radial_one: hsl(214, 47%, 23%);
+  --Radial_two: hsl(237, 49%, 15%);
+  --White: #fff;
+  --Mobile: 375px;
+  --Desktop: 1366px;
 }
 
 *{
@@ -83,7 +83,6 @@ button{
   flex-direction: column;
 }
 .box_score .score .title{
-
   color: var(--Score_Text);
   font-size: .7rem;
   text-transform: uppercase;
@@ -100,7 +99,6 @@ button{
   height: auto;
   min-height: 500px;
   display: flex;
-  /* display: none; */
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -127,12 +125,10 @@ button{
   border: 2px solid red;
   overflow: hidden;
   cursor: pointer;
-  
- 
 }
 .opt:hover{
   transition: .4s all;
- transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 
@@ -159,28 +155,28 @@ button{
 
 .images span:nth-child(4){
   position: absolute; 
-    top: 15%;
-   z-index: 1;
-   right: 3%;
-   border: .8rem solid var(--yellow_to);
-   box-shadow: 0 2px 0 3px var(--yellow_one);
+  top: 15%;
+  z-index: 1;
+  right: 3%;
+  border: .8rem solid var(--yellow_to);
+  box-shadow: 0 2px 0 3px var(--yellow_one);
 }
-  .images span:nth-child(3){
-    position: absolute; 
-    top: 15%;
-    z-index: 1;
-    left: 3%;
-    border: .8rem solid var(--paper_two);
-    box-shadow: 0 2px 0 3px var(--paper_one);
+.images span:nth-child(3){
+  position: absolute; 
+  top: 15%;
+  z-index: 1;
+  left: 3%;
+  border: .8rem solid var(--paper_two);
+  box-shadow: 0 2px 0 3px var(--paper_one);
    
-  }
-  .images span:nth-child(2){
-    position: absolute; 
-    bottom: 20%;
-    z-index: 1;
-    border: .8rem solid var(--rock_two);
-    box-shadow: 0 2px 0 3px var(--rock_one);
-  }
+}
+.images span:nth-child(2){
+  position: absolute; 
+  bottom: 20%;
+  z-index: 1;
+  border: .8rem solid var(--rock_two);
+  box-shadow: 0 2px 0 3px var(--rock_one);
+}
 
 
 .images .opt .paper,.rock,.scissors{
@@ -195,12 +191,10 @@ button{
 
 .modal__rules{
   display: none;
-  /* border: 2px solid red; */
   width: 100%;
   position: fixed;
   z-index: 3;
   height: 100vh;
-  /* display: flex; */
   align-items: center;
   justify-content: space-evenly;
   background-color: var(--White);
