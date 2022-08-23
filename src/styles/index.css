@@ -21,28 +21,27 @@
   --Mobile: 375px;
   --Desktop: 1366px;
 }
-
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
 body {
   font-family: "Barlow Semi Condensed", sans-serif;
   background: linear-gradient(to bottom, var(--Radial_one),var(--Radial_two));
   background-repeat:no-repeat ;
   min-height: 100vh;
-  display: grid;
-  place-items: center;
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
   padding: 1rem;
+  scroll-behavior: smooth;
 }
 button{
   font-family: "Barlow Semi Condensed", sans-serif;
 }
-
 .box_score{
   width: 100%;
   height: 100%;
@@ -52,9 +51,8 @@ button{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 0 1rem  0 1rem;
+  padding: 10px;
 }
-
 .box_score .options{
   display: grid;
   place-items: center;
@@ -68,7 +66,6 @@ button{
   color: var(--White);
   font-weight: 600;
 }
-
 .box_score  .score{
   width: 100%;
   max-width: 100px;
@@ -87,13 +84,19 @@ button{
   font-size: .7rem;
   text-transform: uppercase;
 }
-
 .box_score .score .count{
   font-size: 4rem;
   font-weight: 700;
   color: var( --Dark_Text);
+  animation: .5s ease .5s both animaOpacity;
 }
-
+@keyframes animaOpacity{
+  0%{
+    opacity: 0;
+  }100%{
+    opacity: 1;
+  }
+}
 .images{
   width: 100%;
   height: auto;
@@ -103,8 +106,7 @@ button{
   justify-content: center;
   flex-direction: column;
   position: relative;
-  
-  
+  animation: .5s ease .5s both animaOpacity;
 }
 .images .triangule{
   background-size: cover;
@@ -130,8 +132,6 @@ button{
   transition: .4s all;
   transform: scale(1.1);
 }
-
-
 .images .opt::after{
   content: '';
   width: 100%;
@@ -140,7 +140,6 @@ button{
   position: absolute;
   top: 0;
 }
-
 .images .opt::before{
   content: '';
   width: 100%;
@@ -151,8 +150,6 @@ button{
   border-radius: 50%;
   z-index: 1;
 }
-
-
 .images span:nth-child(4){
   position: absolute; 
   top: 15%;
@@ -177,8 +174,6 @@ button{
   border: .8rem solid var(--rock_two);
   box-shadow: 0 2px 0 3px var(--rock_one);
 }
-
-
 .images .opt .paper,.rock,.scissors{
   width: 100%;
   max-width: 60px;
@@ -187,8 +182,6 @@ button{
   z-index: 2;
   pointer-events: none;
 }
-
-
 .modal__rules{
   display: none;
   width: 100%;
@@ -199,7 +192,6 @@ button{
   justify-content: space-evenly;
   background-color: var(--White);
   flex-direction: column;
-
 }
 .modal__rules .title{
   font-size: 2rem;
@@ -208,7 +200,6 @@ button{
   color: var(--Radial_one);
   opacity: .7;
 }
-
 .modal__rules .close{
   width: 35px;
   height: 35px;
@@ -237,4 +228,51 @@ button{
 .rules:hover{
   transition: .5s all;
   opacity: .6;
+}
+@media (min-width:432px){
+  body{
+    padding: 0;
+  }
+  .box_score{
+    max-width: 600px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .box_score  .score{
+    max-width: 130px;
+  }
+  .box_score .score .title{
+    font-size: 1rem;
+  }
+  .images{
+    position: none;
+    max-width: 400px;
+  }
+  .images .triangule{
+    width: 300px;
+    height: 300px;
+  }
+  .images span:nth-child(4){
+    top: 4vh;
+    z-index: 1;
+    right: 0;
+  }
+  .images span:nth-child(3){
+    top: 4vh;
+    z-index: 1;
+    left: 0;
+  }
+  .images span:nth-child(2){
+    bottom: 12vh;
+    z-index: 1;
+  }
+  .rules{
+    margin: 0 auto;
+  }
+}
+@media (min-width:800px){
+  .rules{
+    margin-left:calc(100vw / 1.2);
+    margin-bottom: 10px;
+  }
 }

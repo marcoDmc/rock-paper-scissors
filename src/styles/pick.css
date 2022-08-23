@@ -1,10 +1,19 @@
 .pick {
   width: 100%;
   height: auto;
-  min-height: 500px;
+  min-height: 300px;
   display: none;
   align-items: center;
   justify-content: space-between;
+}
+
+@keyframes animaOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .pick .wrapper_opt,
 .wrapper_picked {
@@ -70,16 +79,16 @@
   z-index: 2;
 }
 .pick .wrapper_opt #rock {
-  border: 0.8rem solid var(--rock_two);
-  box-shadow: 0 2px 0 3px var(--rock_one);
+  border: 1rem solid var(--rock_two);
+  box-shadow: 0 4px 0 4px var(--rock_one);
 }
 .pick .wrapper_opt #scissors {
-  border: 0.8rem solid var(--yellow_to);
-  box-shadow: 0 2px 0 3px var(--yellow_one);
+  border: 1rem solid var(--yellow_to);
+  box-shadow: 0 4px 0 4px var(--yellow_one);
 }
 .pick .wrapper_opt #paper {
-  border: 0.8rem solid var(--paper_two);
-  box-shadow: 0 2px 0 3px var(--paper_one);
+  border: 1rem solid var(--paper_two);
+  box-shadow: 0 4px 0 4px var(--paper_one);
 }
 
 .pick_cpu {
@@ -90,6 +99,7 @@
   border-radius: 50%;
   background-color: var(--Radial_two);
   display: flex;
+  animation: 0.5s ease 0.5s both animaOpacity;
 }
 .pick .wrapper_picked .house_picked {
   width: 100%;
@@ -103,6 +113,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  animation: 0.5s ease 0.5s both animaOpacity;
 }
 .pick .wrapper_picked .house_picked .rock {
   width: 100%;
@@ -147,16 +158,16 @@
 }
 
 .wrapper_picked #paper {
-  border: 0.8rem solid var(--paper_two);
-  box-shadow: 0 2px 0 3px var(--paper_one);
+  border: 1rem solid var(--paper_two);
+  box-shadow: 0 4px 0 4px var(--paper_one);
 }
 .wrapper_picked #rock {
-  border: 0.8rem solid var(--rock_two);
-  box-shadow: 0 2px 0 3px var(--rock_one);
+  border: 1rem solid var(--rock_two);
+  box-shadow: 0 4px 0 4px var(--rock_one);
 }
 .wrapper_picked #scissors {
-  border: 0.8rem solid var(--yellow_to);
-  box-shadow: 0 2px 0 3px var(--yellow_one);
+  border: 1rem solid var(--yellow_to);
+  box-shadow: 0 4px 0 4px var(--yellow_one);
 }
 
 .result {
@@ -164,10 +175,12 @@
   height: auto;
   display: none;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 2rem;
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 1rem;
+  animation: 0.5s ease 0.5s both animaOpacity;
 }
 .result .title {
   font-size: 3rem;
@@ -193,4 +206,33 @@
   transition: 0.5s all;
   transform: scale(1.1);
   cursor: pointer;
+}
+
+@media (min-width: 432px) {
+  .pick {
+    position: relative;
+  }
+  .pick_cpu {
+    max-width: 180px;
+    min-height: 180px;
+  }
+  .pick .wrapper_picked .house_picked,
+  .pick .opt_pick {
+    max-width: 180px;
+    min-height: 180px;
+  }
+  .result {
+    position: absolute;
+    top: 47vh;
+  }
+}
+
+@media (max-width: 816px) {
+  .pick {
+    margin-bottom: 2rem;
+  }
+  .result {
+    top: 25vh;
+    z-index: 0;
+  }
 }
