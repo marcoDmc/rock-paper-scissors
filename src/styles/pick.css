@@ -1,0 +1,228 @@
+.pick {
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  /* display: flex; */
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 2px solid red; */
+}
+.pick .wrapper_opt,
+.wrapper_picked {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.pick .wrapper_opt .title,
+.wrapper_picked .title {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--White);
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+
+.pick .opt_pick {
+  background-color: var(--White);
+  width: 100%;
+  max-width: 140px;
+  height: 100%;
+  min-height: 140px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid red; */
+  overflow: hidden;
+  cursor: pointer;
+}
+/* .opt:hover {
+  transition: 0.4s all;
+  transform: scale(1.1);
+} */
+
+.pick .opt_pick::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+}
+
+.pick .opt_pick::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--White);
+  position: absolute;
+  top: 5px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.pick .wrapper_opt .opt_pick .img_pick {
+  width: 100%;
+  max-width: 60px;
+  background-color: var(--White);
+  background-size: cover;
+  z-index: 2;
+}
+.pick .wrapper_opt #rock {
+  border: 0.8rem solid var(--rock_two);
+  box-shadow: 0 2px 0 3px var(--rock_one);
+}
+.pick .wrapper_opt #scissors {
+  border: 0.8rem solid var(--yellow_to);
+  box-shadow: 0 2px 0 3px var(--yellow_one);
+}
+.pick .wrapper_opt #paper {
+  border: 0.8rem solid var(--paper_two);
+  box-shadow: 0 2px 0 3px var(--paper_one);
+}
+
+/* .pick .wrapper_opt span:nth-child(4) {
+  position: absolute;
+  top: 15%;
+  z-index: 1;
+  right: 3%;
+  border: 0.8rem solid var(--yellow_to);
+  box-shadow: 0 2px 0 3px var(--yellow_one);
+}
+.pick .wrapper_opt span:nth-child(3) {
+  position: absolute;
+  top: 15%;
+  z-index: 1;
+  left: 3%;
+  border: 0.8rem solid var(--paper_two);
+  box-shadow: 0 2px 0 3px var(--paper_one);
+} */
+.pick_cpu {
+  /* border: 2px solid red; */
+  width: 100%;
+  max-width: 140px;
+  height: 100%;
+  min-height: 140px;
+  border-radius: 50%;
+  background-color: var(--Radial_two);
+  /* background-color: var(--White); */
+  display: flex;
+  /* display: none; */
+}
+.pick .wrapper_picked .house_picked {
+  /* border: 2px solid red; */
+  width: 100%;
+  max-width: 140px;
+  height: 100%;
+  min-height: 140px;
+  border-radius: 50%;
+  /* background-color: var(--Radial_two); */
+  background-color: var(--White);
+  position: relative;
+  /* display: flex; */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.pick .wrapper_picked .house_picked .rock {
+  width: 100%;
+  max-width: 60px;
+  background-color: var(--White);
+  background-size: cover;
+  z-index: 2;
+}
+.pick .wrapper_picked .house_picked .paper {
+  width: 100%;
+  max-width: 60px;
+  background-color: var(--White);
+  background-size: cover;
+  z-index: 2;
+}
+.pick .wrapper_picked .house_picked .scissors {
+  width: 100%;
+  max-width: 60px;
+  background-color: var(--White);
+  background-size: cover;
+  z-index: 2;
+}
+
+.wrapper_picked .house_picked::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+}
+
+.wrapper_picked .house_picked::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--White);
+  position: absolute;
+  top: 5px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.wrapper_picked #paper {
+  border: 0.8rem solid var(--paper_two);
+  box-shadow: 0 2px 0 3px var(--paper_one);
+}
+.wrapper_picked #rock {
+  border: 0.8rem solid var(--rock_two);
+  box-shadow: 0 2px 0 3px var(--rock_one);
+}
+.wrapper_picked #scissors {
+  border: 0.8rem solid var(--yellow_to);
+  box-shadow: 0 2px 0 3px var(--yellow_one);
+}
+
+.result {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: auto;
+  /* display: flex; */
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.result .title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--White);
+  font-weight: 700;
+}
+.result .play {
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--White);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--Radial_two);
+  outline: none;
+  font-weight: 600;
+}
+
+.result .play:hover {
+  transition: 0.5s all;
+  transform: scale(1.1);
+  cursor: pointer;
+}
