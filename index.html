@@ -4,18 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles/index.css" />
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./src/assets/favicon-32x32.png"
     />
-
     <title>Rock, Paper, Scissors</title>
   </head>
   <body>
-    <!-- Rules -->
     <div class="box_score" aria-label="box score">
       <span class="options">
         <p class="type">rock</p>
@@ -27,7 +24,6 @@
         <p class="count">0</p>
       </div>
     </div>
-    <!-- box images -->
     <div class="images" aria-label="box images">
       <img
         src="./src/assets/bg-triangle.svg"
@@ -37,11 +33,9 @@
       <span class="opt" id="rock">
         <img src="./src/assets/icon-rock.svg" alt="rock" class="rock" />
       </span>
-
       <span class="opt" id="paper">
         <img src="./src/assets/icon-paper.svg" alt="paper" class="paper" />
       </span>
-
       <span class="opt" id="scissors">
         <img
           src="./src/assets/icon-scissors.svg"
@@ -50,7 +44,6 @@
         />
       </span>
     </div>
-    <!-- pick -->
     <div class="pick" aria-label="game selection box">
       <div class="wrapper_opt">
         <span class="opt_pick">
@@ -60,14 +53,12 @@
       </div>
       <div class="wrapper_picked">
         <span class="pick_cpu"></span>
-        <span class="house_picked" >
-          <img src="#" alt="paper" id="cpu_pick_img"/>
+        <span class="house_picked">
+          <img src="#" alt="paper" id="cpu_pick_img" />
         </span>
         <strong class="title">The House Picked</strong>
       </div>
     </div>
-    <!-- pick -->
-
     <div class="modal__rules" aria-label="modal rules">
       <string class="title">rules</string>
       <img
@@ -77,13 +68,11 @@
       />
       <ion-icon name="close" class="close"></ion-icon>
     </div>
-    <!-- result -->
     <div class="result">
       <strong class="title" id="title"> You Lose</strong>
       <button class="play">Play Again</button>
     </div>
     <button class="rules">rules</button>
-
     <script src="src/scripts/index.js" type="module"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </body>
