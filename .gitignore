@@ -4,3 +4,4 @@
 *.xd
 *.fig
 .DS_Store
+*style-guide.md
