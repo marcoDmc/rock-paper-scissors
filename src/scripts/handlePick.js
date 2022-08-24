@@ -184,7 +184,7 @@ class PickUpOptions {
       setTimeout(() => {
         resultBox.style.display = "flex";
         resultMessage.innerText = "you win";
-        counter.innerText = count + 1;
+        counter.innerText = count += 1;
       }, 6000);
 
 
@@ -194,7 +194,7 @@ class PickUpOptions {
       setTimeout(() => {
         resultBox.style.display = "flex";
         resultMessage.innerText = "you loser";
-        count < 1 ? (count = 0) : count - 1;
+        count < 1 ? (count = 0) : count -= 1;
         counter.innerText = count;
       }, 6000);
 
@@ -205,7 +205,7 @@ class PickUpOptions {
       setTimeout(() => {
         resultBox.style.display = "flex";
         resultMessage.innerText = "you win";
-        counter.innerText = count + 1;
+        counter.innerText = count += 1;
       }, 6000);
 
 
@@ -215,7 +215,7 @@ class PickUpOptions {
       setTimeout(() => {
         resultBox.style.display = "flex";
         resultMessage.innerText = "you loser";
-        count < 1 ? (count = 0) : count - 1;
+        count < 1 ? (count = 0) : count -= 1;
         counter.innerText = count;
       }, 6000);
 
@@ -226,7 +226,7 @@ class PickUpOptions {
       setTimeout(() => {
         resultBox.style.display = "flex";
         resultMessage.innerText = "you win";
-        counter.innerText = count + 1;
+        counter.innerText = count += 1;
       }, 6000);
 
 
@@ -236,7 +236,7 @@ class PickUpOptions {
       setTimeout(() => {
         resultBox.style.display = "flex";
         resultMessage.innerText = "you loser";
-        count < 1 ? (count = 0) : count - 1;
+        count < 1 ? (count = 0) : count -= 1;
         counter.innerText = count;
       }, 6000);
 
