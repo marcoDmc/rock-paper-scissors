@@ -90,6 +90,14 @@
   border: 1rem solid var(--paper_two);
   box-shadow: 0 4px 0 4px var(--paper_one);
 }
+.pick .wrapper_opt #spock {
+  border: 1rem solid var(--cyan_two);
+  box-shadow: 0 4px 0 4px var(--cyan_one);
+}
+.pick .wrapper_opt #lizard {
+  border: 1rem solid var(--lizard_two);
+  box-shadow: 0 4px 0 4px var(--lizard_one);
+}
 
 .pick_cpu {
   width: 100%;
@@ -137,6 +145,22 @@
   z-index: 2;
 }
 
+.pick .wrapper_picked .house_picked .spock {
+  width: 100%;
+  max-width: 60px;
+  background-color: var(--White);
+  background-size: cover;
+  z-index: 2;
+}
+
+.pick .wrapper_picked .house_picked .lizard {
+  width: 100%;
+  max-width: 60px;
+  background-color: var(--White);
+  background-size: cover;
+  z-index: 2;
+}
+
 .wrapper_picked .house_picked::after {
   content: "";
   width: 100%;
@@ -168,6 +192,15 @@
 .wrapper_picked #scissors {
   border: 1rem solid var(--yellow_to);
   box-shadow: 0 4px 0 4px var(--yellow_one);
+}
+
+.wrapper_picked #spock {
+  border: 1rem solid var(--cyan_two);
+  box-shadow: 0 4px 0 4px var(--cyan_one);
+}
+.wrapper_picked #lizard {
+  border: 1rem solid var(--lizard_two);
+  box-shadow: 0 4px 0 4px var(--lizard_one);
 }
 
 .result {
