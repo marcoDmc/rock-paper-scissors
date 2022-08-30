@@ -128,7 +128,7 @@ class Match {
         this.count++;
         counter.innerText = this.count;
       }, 4000);
-    } else if (player === "Lizard" && cpu === "paper") {
+    } else if (player === "lizard" && cpu === "paper") {
       setTimeout(() => {
         resultBox.style.display = "flex";
         resultMessage.innerText = "you win";
